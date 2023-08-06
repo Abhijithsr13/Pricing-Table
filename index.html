@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+ <style>
+    html{
+      background-color: lightgreen;
+    }
+    body {
+      font-family: 'Sono', sans-serif;
+    }  
+   .pricing-container{
+    display:flex;
+     gap: 50px; 
+     flex-wrap:wrap;
+     justify-content: space-around;
+     align-content:center;
+     height: 100vh;
+
+      }
+      .pricing-plan{
+        flex-shrink: 370px;
+        flex: 1;
+        border: 5px solid black;
+        height: 500px;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+   .pricing-plan:hover{
+  border-color:rgb(11, 0, 55);
+  box-shadow: 0px 0px 20px lightblue,
+              0px 0px 30px lightcoral,
+              0px 0px 60px rgb(236, 4, 253);
+   }
+
+      
+      .plan-title{
+        font-size: 50px;
+        text-align: center;
+        font-family: 'Lobster','cursive';
+      }
+      
+      .plan-price{
+        font-size: 50px;
+        margin-top: 10%;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+
+      }
+      .plan-features{
+        font-size: 30px;
+        margin-top: 10%;
+        font-family: 'Sriracha','cursive';
+      }
+      button{
+        align-content: baseline;
+        font-size: 20px;
+        position: absolute;
+        left: 40%;
+        color: white;
+        background-color: black;
+        border: 0;
+        border-radius: 10px;
+      }
+      .basic{
+        background-color: lightslategray;
+        flex-shrink: 370px;
+        border-radius: 30px;
+      }
+      .standard{
+         background-color:lightcoral;
+         flex-shrink: 370px;
+         border-radius: 30px;
+      }
+      .premium{
+        background-color: rgb(255, 0, 38);
+        flex-shrink: 370px;
+        border-radius: 30px;
+      }
+
+    @media(max-width: 1200px){
+      .pricing-container{
+        flex-direction: column;
+        height: 10%;
+      }
+    }
+      
+    /* Hint: What can you do with a media query and flexbox? */
+    
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="basic">  
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    </div>
+    <div class="standard">  
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    </div>
+     <div class="premium">  
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li> 
+      </ul>
+      <button class="plan-button">Sign Up</a> 
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
